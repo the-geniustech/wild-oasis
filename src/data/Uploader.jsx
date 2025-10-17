@@ -157,3 +157,34 @@ export function Uploader() {
     </div>
   );
 }
+
+export function CurrentBookingUploader() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  async function uploadBookings() {
+    setIsLoading(true);
+    await deleteBookings();
+    await createBookings();
+    setIsLoading(false);
+  }
+
+  return (
+    <div
+      style={{
+        // marginTop: "auto",
+        // backgroundColor: "#e0e7ff",
+        padding: "8px",
+        // borderRadius: "5px",
+        // textAlign: "center",
+      }}
+    >
+      <Button onClick={uploadBookings} disabled={isLoading}>
+        Upload CURRENT bookings
+      </Button>
+      <p style={{ fontSize: "14px", color: "#949494" }}>
+        You can run this to see fresh bookings data analytics on the app
+        dashboad
+      </p>
+    </div>
+  );
+}
