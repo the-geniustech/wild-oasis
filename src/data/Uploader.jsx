@@ -178,7 +178,8 @@ export function CurrentBookingUploader() {
         // textAlign: "center",
       }}
     >
-      <Button onClick={uploadBookings} disabled={isLoading}>
+      {/* <Button onClick={uploadBookings} disabled={isLoading}> */}
+      <Button onClick={uploadBookings} >
         Upload CURRENT bookings
       </Button>
       <p style={{ fontSize: "14px", color: "#949494" }}>
